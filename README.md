@@ -1,4 +1,4 @@
-# Password
+# PassRanger
 Python password generator and Encrypter.
 Genearates 2 types of passwords.
 Simple and Strong Password based on User's Choice.
@@ -19,8 +19,7 @@ To generate this file call Write_Key() fuction before running script.
 ### Note: DONot Call Write_Key() function more than Once.
 
 ## Source Code Png.
-![carbon](https://user-images.githubusercontent.com/79792270/128474923-41b8758c-2daa-4d13-b564-97cc3219b207.png)
-
+![carbon(5)](https://user-images.githubusercontent.com/79792270/132103622-161c82b3-98fa-40fa-a473-fffa4517173c.png)
 
 ### How to Use:
 1. Call Write_Key function.
