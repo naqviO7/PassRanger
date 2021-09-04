@@ -6,7 +6,23 @@
 import random
 import array
 import string 
+import time
+import sys
 from cryptography.fernet import Fernet
+
+
+#banner 
+def banner():
+    print("""
+ ____               ____                             
+|  _ \ __ _ ___ ___|  _ \ __ _ _ __   __ _  ___ _ __ 
+| |_) / _` / __/ __| |_) / _` | '_ \ / _` |/ _ \ '__|
+|  __/ (_| \__ \__ \  _ < (_| | | | | (_| |  __/ |   
+|_|   \__,_|___/___/_| \_\__,_|_| |_|\__, |\___|_|   
+                                     |___/                   
+                                        Version 1.0 
+                                            by naqviO7      
+    """)
 
 
 #function to get key from file
@@ -15,6 +31,7 @@ def Reterive_Key():
     file= open('key.key','rb')
     key=file.read()
     file.close()
+    
     return key  
 
 
@@ -37,7 +54,6 @@ def MENU():
     file.write("Usernames\t\t" + " | " + "\tEncrypted Passwords"+"\n\n")
 
 
-    
 # => function will generate strong password
 # => password will be generated randomly
 # => passwords will be composed of characters and symbols
@@ -154,32 +170,56 @@ def View_Password():
     with open("pwds.txt","r") as file:
         for line in file.readlines():
             data=line.rstrip()
-            username,password=data.split("|")
-       
+            #username,password=data.split("|")
+            
             # => printing usernames and passwords
-            print("UserName: ",username,"| Decrypted Passowrd: ",fer.decrypt(password.encode().decode))
-       
+            #print("UserName: ",username,"| Decrypted Passowrd: ",fer.decrypt(password.encode().decode))
+            
+            print(data)
+
+
 
 # => user defined main function 
 # => where execution starts 
 def Main_Function():
+    time.sleep(3)
+    #banner function to print banner
+    banner()
+    
+    time.sleep(3)
+    #menu of program
     MENU()
+    
     opt=int(input('Enter Key to Perform Operation: '))
     
     if opt==1:
+        time.sleep(2)
         Generate_Strong_Password()
     
     elif opt==2:
+        time.sleep(2)
         Generate_Simple_Password()
         
     elif opt==3:
+        time.sleep(2)
         View_Password()
     
     elif opt==0:
-        exit()
+        time.sleep(2)
+        print('Quitting.... PassRanger!\n')
+        sys.exit(1)
         
     else:
+        time.sleep(1)
         print("OOps...Invalid Option!")
-        
-# => calling main function        
-Main_Function()
+ 
+ 
+#managing import system
+if __name__ == "__main__": 
+    
+    time.sleep(1)
+    
+    #  calling main function        
+    Main_Function()
+
+#END OF CODE
