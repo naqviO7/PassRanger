@@ -8,7 +8,12 @@ import array
 import string 
 import time
 import sys
+from os import system
 from cryptography.fernet import Fernet
+
+
+#setting title 
+system("title " + "PassRanger")
 
 
 #banner 
@@ -182,6 +187,12 @@ def View_Password():
 # => user defined main function 
 # => where execution starts 
 def Main_Function():
+    #clearing screen for windows
+    system('cls')
+    
+    #clearing screen for linux
+    system('clear')
+    
     time.sleep(3)
     #banner function to print banner
     banner()
@@ -212,7 +223,6 @@ def Main_Function():
     else:
         time.sleep(1)
         print("OOps...Invalid Option!")
- 
  
 #managing import system
 if __name__ == "__main__": 
